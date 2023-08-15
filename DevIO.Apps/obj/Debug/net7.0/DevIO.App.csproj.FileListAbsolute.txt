@@ -265,3 +265,5 @@ C:\Users\uliss\source\repos\MinhaAppMvcCompleta\DevIO.Apps\bin\Debug\net7.0\runt
 C:\Users\uliss\source\repos\MinhaAppMvcCompleta\DevIO.Apps\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\uliss\source\repos\MinhaAppMvcCompleta\DevIO.Apps\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\uliss\source\repos\MinhaAppMvcCompleta\DevIO.Apps\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\uliss\source\repos\MinhaAppMvcCompleta\DevIO.Apps\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\uliss\source\repos\MinhaAppMvcCompleta\DevIO.Apps\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
