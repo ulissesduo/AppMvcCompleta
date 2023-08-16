@@ -20,7 +20,7 @@ namespace DevIO.App.ViewModels
         public string Descricao { get; set; }
 
 
-        //public IFormFile ImagemUpload { get; set; }
+        public IFormFile ImagemUpload { get; set; }
 
         public string Imagem { get; set; }
 
@@ -33,5 +33,6 @@ namespace DevIO.App.ViewModels
 
         /* EF Relations */
         public FornecedorViewModel Fornecedor { get; set; }
+        public IEnumerable<FornecedorViewModel> Fornecedores { get; set; } // it will store a list of fornecedores to populate the dropdown
     }
 }
