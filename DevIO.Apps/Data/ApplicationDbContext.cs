@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using DevIO.App.ViewModels;
+using DevIO.Business.Models;
 
 namespace DevIO.App.Data
 {
@@ -10,7 +11,11 @@ namespace DevIO.App.Data
             : base(options)
         {
         }
+        
+        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Fornecedor> Fornecedores { get; set; }
+        public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<DevIO.App.ViewModels.FornecedorViewModel> FornecedorViewModel { get; set; } = default!;
-        public DbSet<DevIO.App.ViewModels.ProdutoViewModel> ProdutoViewModel { get; set; } = default!;
+
     }
 }

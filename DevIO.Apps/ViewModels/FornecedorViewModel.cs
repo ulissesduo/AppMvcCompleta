@@ -1,6 +1,7 @@
 ﻿using DevIO.Business.Models;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DevIO.App.ViewModels
 {
@@ -11,15 +12,14 @@ namespace DevIO.App.ViewModels
         [Required(ErrorMessage = "This field is required")]
         public string Nome { get; set; }
         
-        [Required(ErrorMessage = "This field is required")] //falta colocar o tamanho da string pra não ficar 100000000000000000
+        [Required(ErrorMessage = "This field is required")] //i must add a size on this inputs
         public string Documento { get; set; }
         [DisplayName("Tipo")]
         public int TipoFornecedor { get; set; }
         public EnderecoViewModel Endereco { get; set; }
         [DisplayName("Ativo")]
         public bool Ativo { get; set; }
-
-        /* EF Relations */
+        [NotMapped]
         public IEnumerable<ProdutoViewModel> Produtos { get; set; }
     }
 }

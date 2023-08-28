@@ -120,7 +120,7 @@ namespace DevIO.App.Controllers
             var produto = _mapper.Map<ProdutoViewModel>(await _produtoRepository.ObterProdutoFornecedor(id)); //this variable stores the product and its supplier
             //produto.Fornecedor = _mapper.Map<IEnumerable<FornecedorViewModel>>(await _fornecedorRepository.ObterTodos());//here we have mapped the suppliers of the list generated before
 
-            produto.Fornecedor = (FornecedorViewModel)_mapper.Map<IEnumerable<FornecedorViewModel>>(await _fornecedorRepository.ObterTodos()); 
+            produto.Fornecedores = _mapper.Map<IEnumerable<FornecedorViewModel>>(await _fornecedorRepository.ObterTodos()); 
             return produto;
         }
 
