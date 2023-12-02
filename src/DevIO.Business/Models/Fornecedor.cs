@@ -5,6 +5,7 @@ namespace DevIO.Business.Models
 {
     public class Fornecedor : Entity
     {
+        public Guid Id { get; set; }
         public string Nome { get; set; }
         public string Documento { get; set; }
         public TipoFornecedor TipoFornecedor { get; set; }

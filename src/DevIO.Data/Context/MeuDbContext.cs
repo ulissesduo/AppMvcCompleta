@@ -16,22 +16,20 @@ namespace DevIO.Data.Context
         }
 
         public DbSet<Produto> Produtos { get; set; }
-        public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<Fornecedor> Fornecedores { get; set; }
-        
+        public DbSet<Endereco> enderecos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(MeuDbContext).Assembly);
+            //foreach(var property in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetProperties().Where(p => p.ClrType == typeof(string))) 
 
-            //bisable cascade deletion
-            foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
-            {
-                relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
-            }
-            
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(MeuDbContext).Assembly);//register each mappings at the same time
+
+            //remove delete cascade
+            foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
+
+
             base.OnModelCreating(modelBuilder);
         }
-
     }
 }

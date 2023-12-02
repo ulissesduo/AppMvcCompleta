@@ -17,7 +17,7 @@ namespace DevIO.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.9")
+                .HasAnnotation("ProductVersion", "7.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -89,7 +89,7 @@ namespace DevIO.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Fornecedores", (string)null);
+                    b.ToTable("Fornecedor", (string)null);
                 });
 
             modelBuilder.Entity("DevIO.Business.Models.Produto", b =>
@@ -106,7 +106,7 @@ namespace DevIO.Data.Migrations
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(1000)");
 
                     b.Property<Guid>("FornecedorId")
                         .HasColumnType("uniqueidentifier");
